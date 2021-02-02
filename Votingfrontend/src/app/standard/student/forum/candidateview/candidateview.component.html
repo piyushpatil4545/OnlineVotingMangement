@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+
+
+<div class="container">
+ 
+  <button type="button" id="vote" (click)="downloadPdf()" class="btn btn-info">Guidelines PDF</button>
+  <h2>List of  Candidates for Student Council Elections 2020 -2021</h2>
+  <select id="selectIdS" class="form-control-mb-12 btn btn-primary dropdown-toggle" (change)="getCandidateByPosition($event.target.value)">
+    <option>Select Position</option>
+    <option *ngFor="let position of positions " [value]="position">{{position}}</option>
+</select>&nbsp;&nbsp;
+  <table class="table table-striped">
+    <thead>
+      <tr>
+      
+        <th>Name</th>
+ 
+        <th>Party</th>      
+        <th>Position</th>
+        <th>Description</th> 
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let candidate of candidate ">
+      <tr>
+
+        <td>{{ candidate.name }}</td>
+     
+        <td>{{ candidate.party}}</td>
+        <td>{{ candidate.position}}</td>
+        <td>{{ candidate.details}}</td>
+        
+        <td>
+        
+          <button type="button" id="vote" (click)="voteCandidate(candidate.candidate_id)" class="btn btn-info">Vote ! </button>&nbsp;&nbsp;
+          <!-- <popup>Are you sure you want to DELETE ?</popup> -->
+          <!-- <button (click)="delete(voter.name)" type="button" class="btn btn-danger">Delete</button> -->
+        </td>
+     
+      </tr>
+      
+
+    </tbody>
+  </table>
+  <div class="w3-container w3-padding">
+    <button type="button" class="btn btn-danger w3-right"   (click)="logout()">Logout</button>
+    </div>
+
+</div>
+</body>
+</html>

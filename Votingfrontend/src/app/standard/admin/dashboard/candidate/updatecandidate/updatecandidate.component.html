@@ -1,0 +1,208 @@
+
+
+<div class="container">
+    <div class="row">
+  
+  
+  
+        <div class="col-sm-6 ">
+  
+            <div class="signup-form ">
+
+                
+  
+                <form class="form-horizontal" (ngSubmit)="updateCandidate()">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>Update Candidate</h2>
+                        </div>
+                    </div>
+
+                    <div *ngIf="alert" class="alert alert-success" role="alert">
+                        <h4 class="alert-heading">Success !</h4>
+                        <p>Candidate Registration successfull</p>
+                      
+                       
+                      </div>
+
+                   
+
+
+
+
+                      <div class="form-group row">
+                        <label class="col-form-label col-md-4"> Candidate ID </label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" required [(ngModel)] = "candidate.candidate_id" name="id" disabled>
+                        </div>
+                    </div>
+                    
+
+
+
+
+
+
+
+
+
+                    
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-4">Username</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control"  placeholder="Enter Username"  name="candidateName" [(ngModel)]="candidate.name" disabled
+                            #name="ngModel"
+							 [class.is-invalid]="name.invalid && name.touched"
+                            >
+							 <div *ngIf="name.errors && (name.invalid && name.touched)">
+                              <small class="text-danger" *ngIf="name.errors.required">Username  is Required Field</small>
+                              <small class="txt-danger" [class.d-none]="email.valid || email.untouched" style="color:white">Username is Required Field</small>
+							 
+                        </div>
+                      </div>
+                    </div>
+  
+
+ <div class="form-group row">
+    <label class="col-form-label col-md-4">Email</label>
+       <div class="col-md-8">
+           <input type="email" class="form-control"  placeholder="Enter email" name="email" [(ngModel)]="candidate.email" required
+            pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"  #email="ngModel" 
+            [class.is-invalid]="email.invalid && email.touched"
+            >
+          <div *ngIf="email.errors && (email.invalid && email.touched)">
+             <small class="text-danger" *ngIf="email.errors.required">Email Id is Required Field</small>
+             <small class="text-danger" *ngIf="email.errors.pattern">Enter the Valid Email Id</small>			 
+                          </div>
+                        </div>
+                      </div>
+		 
+		 
+		 
+		
+
+  
+                   
+  
+  
+                 
+  
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-4">Gender</label>
+                        <div class="col-md-8">
+                            <div class="form-check-inline">
+                                <label class="form-check-label" for="MALE">
+                                    <input type="radio" class="form-check-input" id="MALE" name="gender"  [(ngModel)]="candidate.gender" value="MALE" checked> MALE
+                                </label>
+                                <label class="form-check-label" for="FEMALE">
+                                    <input type="radio" class="form-check-input" id="FEMALE" name="gender"  [(ngModel)]="candidate.gender" value="FEMALE">FEMALE
+                                </label>
+                            </div>
+                            
+                        </div>
+                    </div>
+  
+  
+  
+                   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+               
+					
+					
+    <div class="form-group row">
+     <label class="col-form-label col-md-4">Position</label>
+ <div class="col-md-8">
+ 
+  <select name = "position"   class="form-control" id = "position" [(ngModel)]="candidate.position">
+
+   <option  value="PRESIDENT" >PRESIDENT</option>
+   <option  value="VICE_PRESIDENT">VICE_PRESIDENT</option>
+   
+   <option  value="VP_EVENTS">VP_EVENTS</option>
+   <option  value="TREASURER">TREASURER</option>
+  </select>
+  <p>Enter Position name</p>
+  </div>
+  </div>
+  
+  
+  
+  				
+<div class="form-group row">
+<label class="col-form-label col-md-4">Party</label>
+ <div class="col-md-8">
+   
+  <select name = "party"   class="form-control" id = "party"  [(ngModel)]="candidate.party"> 
+
+
+   <option  value="National_Student_Organisation" >National_Student_Organisation</option>
+   <option  value="Chattra_Bharti_Sangathan">Chattra_Bharti_Sangathan</option>
+   <option  value="krantikari_Student_Union">krantikari_Student_Union</option>
+   <option  value="Campus_Student_Association">Campus_Student_Association</option>
+   
+  </select>
+  
+  <p>Enter Party Name</p>
+   
+ 
+  </div>
+  </div>
+				
+
+
+<div class="form-group row">
+                            <label class="col-form-label col-md-4"> Description </label>
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <textarea class="form-control" name="details" [(ngModel)]="candidate.details" placeholder="Description" rows="4" data-form-field="Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-4"></div>
+
+                        </div>
+
+
+
+
+
+
+				
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-4">Date Of Birth</label>
+                        <div class="col-md-8">
+                            <div class="form-group">
+  
+                                    <input type="date" min="1900-08-12" max="2020-08-27" class="form-control" name="dob"  placeholder="yyyy-MM-dd"  [(ngModel)]="candidate.dob"> 
+                                            
+                                </div>
+                            </div>
+                        </div>
+  
+  
+                   
+  
+  
+  
+                    <div class="form-group row">
+                        <div class="col-form-label col-md-4">
+                            <button type="submit"  class="btn btn-success">Update </button> &nbsp; &nbsp;
+                            <button  type="button" class="btn btn-primary" (click)="back()">Back</button>&nbsp;&nbsp; 
+                        </div>
+                    </div>
+                    
+                </form>
+  
+            </div>
+        </div>
+    </div>
+  </div>
+  

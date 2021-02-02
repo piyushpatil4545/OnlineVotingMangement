@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+ul{
+	float: left;
+	list-style-type: none;
+  margin-top: 25px;
+ 
+}
+ul li{
+	display: inline-block;
+}
+
+ul li a{
+	text-decoration: none;
+	color: teal;
+	padding: 5px 20px;
+	border: 1px solid transparent;
+	transition: 0.6s ease;
+}
+ul li a:hover{
+	background-color:aquamarine;
+	color: #000;
+}
+div{
+  background-color: yellowgreen;
+}
+
+
+h2{
+  font-family: Century Gothic;
+  background-color: aquamarine;
+}
+
+</style>
+</head>
+
+<body>
+  <h2>St.Xavier's College Student Council</h2>
+<ul>
+ <li>  <a routerLink="home">Home</a> </li>
+       <li><a routerLink="aboutus">About Us</a></li>
+       <li><a routerLink="student">Student</a></li>
+      <li> <a routerLink="culturalactivities">Cultural Activities</a></li>
+       <li> <a routerLink="contactus">Contact Us</a></li>
+       <li><a routerLink="admin">Admin</a></li>
+       <li><a routerLink="electionmanager">Election Manager</a></li>
+</ul>
+<marquee>Welcome to student council St.Xavier's College </marquee>
+
+
+</body>
+
+</html>
+    <router-outlet></router-outlet>

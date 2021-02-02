@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-green.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+</style>
+<body class="w3-theme-l5">
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:5px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+         <h4 class="w3-center">Student Profile</h4>
+         
+         <hr>
+         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i>Engineering</p>
+         <p><i class="fa fa fa-bullseye fa-fw w3-margin-right w3-text-theme"></i> St.Xavier's College Student Council</p>
+         <p><i class="fa fa fa-calendar fa-fw w3-margin-right w3-text-theme"></i>2020-21 Batch</p>
+        </div>
+      </div>
+      <br>
+      
+     
+      <!-- Interests --> 
+      <div class="w3-card w3-round w3-white w3-hide-small">
+        <div class="w3-container">
+          <p>Student Council Clubs</p>
+          <p>
+            <span class="w3-tag w3-small w3-theme-d5">Student welfare Forum</span>&nbsp;
+            <span class="w3-tag w3-small w3-theme-d4">Science Club</span>&nbsp;
+            <span class="w3-tag w3-small w3-theme-d3">Cultural CLub</span>&nbsp;
+			  <span class="w3-tag w3-small w3-theme">Debate</span>&nbsp;
+            <span class="w3-tag w3-small w3-theme-d2">Arts & Crafts</span>&nbsp;
+            <span class="w3-tag w3-small w3-theme-d1">Civil Services Aspirant Clubs</span>&nbsp;
+            <span class="w3-tag w3-small w3-theme">Debate</span>
+           
+          </p>
+        </div>
+      </div>
+      <br>
+       <p><strong>News</strong></p>
+      <!-- Alert Box -->
+      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+       
+     
+        <p><strong> * Extended Date to Apply Online for the Post Graduate Diploma in Integrated Product Design and Development is 
+            </strong></p>
+            <h6 class="w3-opacity">
+            Thursday, 20th August 2020.
+			</h6>
+         </div>
+		 
+		   <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+       
+         
+      
+        <p><strong> * 
+St.Xavier's - Bhoomipujan Ceremony of the New Library building and Dr.Amar Pandhare 
+            </strong></p>
+            <h6 class="w3-opacity">
+            Thursday, 10th Februvary 2020.
+			</h6>
+         </div>
+    
+    <!-- End Left Column -->
+    </div>
+    
+    <!-- Middle Column -->
+	
+    <div class="w3-col m7">
+    
+      <div class="w3-row-padding">
+        <div class="w3-col m12">
+          <div class="w3-card w3-round w3-white">
+            <div class="w3-container w3-padding">
+              <button type="button" class="btn btn-danger w3-right"   (click)="logout()">Logout</button>
+              <!-- <button type="button" class="btn btn-primary w3-right" (click)="updateStudent(voter.name)" >Update Profile</button>&nbsp; -->
+			 <h6 >Welcome Student
+        </h6>
+      
+             
+            </div>
+          </div>
+        </div>
+      </div>
+	  
+	  
+	    
+	  
+	  
+	  
+        <!-- Alert Box -->
+        <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+       
+     
+
+        <p ><strong>Notice!</strong></p>
+        <p>In the view of the <strong> Advisory for University and colleges- Noval Coranavirus(COVID19).</strong>
+        issued by the University Grants Comission to conduct Student Council Elections Online on 10th March 2021</p>
+        <p>If you are willing to be next President ! Vice President ! Club head Register on form given below</p>
+        <strong> Candidate Registration </strong>&nbsp;&nbsp;
+        <button (click)="candidateRegistration()" type="button" class="btn btn-info"> Candidate Register</button>
+        <h6 class="w3-opacity"> Ignore if allready Registered</h6>
+
+
+      </div>                                                                                     
+	
+	 <div class="w3-card w3-round w3-white w3-hide-small">
+        <div class="w3-container">
+          <p>Student Council Elections for following Postions: </p>
+          <p>
+            <span class="w3-tag w3-small w3-theme-d5">PRESIDENT</span>&nbsp;
+            <span class="w3-tag w3-small w3-theme-d4"> VICE PRESIDENT</span>&nbsp;
+            <span class="w3-tag w3-small w3-theme-d3">EVENT CORNDINATOR </span>&nbsp;
+			  <span class="w3-tag w3-small w3-theme">TREASURER</span>&nbsp;
+        
+          </p>
+		   <strong> Candidate List  </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <button type="button" (click)="candidateView()" class="btn btn-danger w3-center " >Vote Candidate</button>
+		  
+        </div>
+      </div>
+
+      
+     <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+       
+     
+         <h6 class="w3-opacity">As per the Maharashtra University Act (M.U.) 1994 section 40, Students’ Council is to be established every year during the first term. As per clause 40 (3) of the said M.U. Act 1994 each college / institute has to elect one University representative. The name of the said student is then to be communicated to the Director, Dept. of Students’ Welfare immediately on the date specified. Late nominations will not be entertained.<br>
+			
+			  </h6>
+			 
+         </div>
+	  
+	  
+
+
+      
+      
+    <!-- End Middle Column -->
+    </div>
+    
+    <!-- Right Column -->
+	
+	
+	
+	
+	
+	
+	<div class="w3-col m2">
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>Upcoming Events:</p>
+         
+          <img src="assets/Images/vote.JPG" alt="Forest" style="width:100%;">
+          <p><strong>Council online Voting</strong></p>
+          <p>March 10th</p>
+         
+        </div>
+      </div>
+	  
+  
+      
+      
+      
+      <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
+        <div class="w3-container">
+          <p>Upcoming Events:</p>
+          <img src="assets/Images/art.jpg" alt="Forest" style="width:100%;">
+          <p><strong>Kala Sparsha</strong></p>
+          <p><strong>Online Art Exibition</strong></p>
+          <p>March 18th </p>
+          
+        </div>
+      </div>
+      <br>
+	  
+      
+      
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+<!-- End Page Container -->
+</div>
+<br>
+
+
+

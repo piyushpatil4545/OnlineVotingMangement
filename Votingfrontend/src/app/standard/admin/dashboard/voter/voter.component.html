@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <h2> Members of St.Xavier's College Student Council</h2>
+         
+  <table class="table table-striped">
+    <thead>
+      <tr>
+     
+        <th>Name</th>
+        <th >Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let voter of voters">
+      <tr>
+      
+        <td>{{ voter.name }}</td>
+        <td>{{voter.email}}</td>
+        <td>
+          <button (click)="updateVoter(voter.name)" type="button"  routerLink="/reload" class="btn btn-primary">Update</button>&nbsp;&nbsp;
+          <button type="button" (click)="viewVoter(voter.name)" class="btn btn-info">View</button>&nbsp;&nbsp;
+          <button (click)="delete(voter.name)" type="button" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+     
+    </tbody>
+</table>
+    <button type="button" (click)="addVoter()" class="btn btn-success">Add Student</button>&nbsp;&nbsp;
+    <button  type="button" class="btn btn-primary" (click)="back()">Back</button>&nbsp;&nbsp;
+    <button type="button" class="btn btn-danger" (click)="logout()">Logout</button>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  
+<div class="container">
+     
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Party</th>      
+        <th>Gender</th>
+        <th>DOB</th>
+        <th>Position</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ candidate.candidate_id }}</td>
+        <td>{{ candidate.name }}</td>
+        <td>{{candidate.email}}</td>
+        <td>{{ candidate.party}}</td>
+        <td>{{candidate.gender}}</td>
+        <td>{{candidate.dob}}</td>
+        <td>{{candidate.position}}</td>
+        <td>{{candidate.details}}</td>
+         </tr>
+          </tbody>
+</table>
+
+&nbsp; &nbsp;
+<button  type="button" class="btn btn-primary" (click)="gotolist()">Back</button>
+       </div>
+</body>
+</html>

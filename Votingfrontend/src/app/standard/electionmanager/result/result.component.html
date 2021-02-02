@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container w3-row">
+    <div class="w3-col s4">
+      <img src="assets/Images/admin.jpg" class="w3-circle w3-margin-right" style="width:46px">
+    </div>
+    <div class="w3-col s8 w3-bar">
+      <strong>Election Manager</strong><br>
+     
+    </div>
+  </div>
+  <hr>
+  <div class="w3-container">
+    <h5>Dashboard</h5>
+  </div>
+  <div class="w3-bar-block">
+    <a  class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a  class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Overview</a>
+    <a   (click)="resultVoterDetails()"  class="w3-bar-item w3-button w3-padding"><i class="fa fa-eye fa-fw"></i>Results</a>
+    <a  class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>Voters</a>
+
+    <a  class="w3-bar-item w3-button w3-padding"><i class="fa fa-bullseye fa-fw"></i>Ballot</a>
+    <a class="w3-bar-item w3-button w3-padding"><i class="fa fa-diamond fa-fw"></i>Settings</a>
+  
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:22px">
+    <h5><b><i class="fa fa-dashboard"></i> Election Result Dashboard</b></h5>
+    <button type="button" class="btn btn-danger w3-right"   (click)="logout()">Logout</button>
+  </header>
+  <div class="container">
+    <h2>Total Vote Count Student Council Elections 2020 -2021</h2>
+           
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Party</th>      
+          <th>Position</th> 
+          <th>Votes</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let candidate of candidates">
+        <tr>
+          <td>{{candidate.candidate_id }}</td>
+          <td>{{ candidate.name }}</td>
+          <td>{{candidate.email}}</td>
+          <td>{{ candidate.party}}</td>
+          <td>{{ candidate.position}}</td>
+          <td>{{ candidate.votes}}</td>
+        </tr>
+        
+      </tbody>
+    </table>
+   
+	</div>
+	</div>
+ 
+  <!-- End page content -->
+
+  
+
+</body>
+</html>

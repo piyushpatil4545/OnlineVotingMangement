@@ -1,0 +1,51 @@
+
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+<div class="container">
+  <h2>Candidate List Student Council Elections 2020-21</h2>
+  <h2>Vote ! Vote ! Vote !</h2>
+  <h3>vote candidate based on their Position !</h3>
+         
+  <table class="table table-striped">
+    <thead>
+      <tr>
+      
+       
+        <th>Name</th>
+        <th>Party</th>      
+        <th>Gender</th>
+        <th>Position</th>
+       
+      </tr>
+    </thead>
+    <tbody *ngFor="let candidate of candidate">
+    
+      <tr>
+       
+      
+        <td>{{ candidate.name }}</td>
+        <td>{{ candidate.party}}</td>
+        <td>{{candidate.gender}}</td>
+        <td>{{candidate.position}}</td>
+      
+
+      </tr>
+      
+
+    </tbody>
+  </table>
+  <button  type="button" class="btn btn-primary" (click)="back()">Back</button>&nbsp;&nbsp;
+  
+
+
+</div>
+</body>
+</html>

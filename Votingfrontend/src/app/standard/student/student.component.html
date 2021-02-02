@@ -1,0 +1,43 @@
+
+
+<div class="tes">
+  <div class="wrapper">
+    <!-- <div">
+      <h2>Welcome {{ voter.name }} </h2>
+    </div> -->
+
+    <h2><p style="color:white"> Student Login </p></h2>
+  
+    <h3><p style="color:red" *ngIf="msg" class="error">Invalid username or password</p></h3>
+    <form #loginform="ngForm">
+     <h3> <p style="color:red" class="txt-danger">{{msg}}</p></h3>
+     <h3> <p  style="color:red" class="er">{{error}}</p>
+            <p *ngIf="toggle" class="er">{{error}}</p></h3>
+
+     <div class="form-group">
+          <input type="text" name="email" [(ngModel)]="voter.email" class="form-control" placeholder="Username" required="required"  #email="ngModel"
+          [class.is-invalid]="email.isinvalid && email.touched"
+          >
+      </div>
+      <!-- <small class="txt-danger" [class.d-none]="email.valid || email.untouched" style="color:white">Email is Required Field</small> -->
+     <h3> <p  class="txt-danger" [class.d-none]="email.valid || email.untouched" style="color:white">Email is Required Field</p></h3>
+      <div class="form-group">
+          <input type="password" name="password" [(ngModel)]="voter.password" class="form-control" placeholder="Password" required="required" #password="ngModel"
+          [class.is-invalid]="password.isinvalid && password.touched"
+          >
+      </div>
+
+      <div class="form-group">
+        <button (click)="voterLogin()" class="btn btn-primary btn-block">Log In</button>
+      </div>
+
+  </form>
+
+    <div class="bottom-text">
+     
+      <!-- <a href="#">Forgot password?</a> -->
+
+</div>
+
+
+
